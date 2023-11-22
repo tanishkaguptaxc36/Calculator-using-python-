@@ -1,160 +1,133 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+import math
+from typing import Text
 
-# C extensions
-*.so
+para = "\My Drive\n\nVersion = v.1.1.1"
+#d1 = {}
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+#d1 ["ID"] = "Name"        #Enter Your Name Here or Id Which You want to use to Login.
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+"""
+Add users with one comand
+"""
+#d1.update({"4585" : "Rishabh"})
+#d1["Arnav"] = "Member"
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+#p = "Enter Your ID : "
+#r = d1[input(p)]
+r = "Sir"
+print(f"\nWelcome {r}")
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
+ls = "\n\n1. Calculator \n2. Info"
+print(ls)
 
-# Translations
-*.mo
-*.pot
+t1 = "\nSelect one of them : "
+take = int(input(t1))
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
+    
+if take == 1 :
+        print("\nCALCULATOR")
+        print("\n\tBuild By Abhay")
 
-# Flask stuff:
-instance/
-.webassets-cache
+        while True:
+            print("\n----------------------------------------------------------------------------------------------------------------------")
+            print("\n1. Addition \n2. Division \n3. Multiplication \n4. Substriction \n5. Percentage \n6. Discount Checker \n7. Square Root \n8. Compound Interest \n99. Exit")
 
-# Scrapy stuff:
-.scrapy
+            first = "\nChoose one of them : "
+            choosen_number = input(first)
 
-# Sphinx documentation
-docs/_build/
+#Addition
+            if choosen_number == "1":
+                print("\nYou have choosed Addition.")
+                fa = "\nValue 1 : "
+                sa = "\nValue 2 : "
+                value1a = input(fa) 
+                value2a = input(sa)
+                total_a = int(value1a)+int(value2a)
+                print(f"\nTotal : {total_a}")
+                continue
+#Division
+            elif choosen_number == "2":
+                print("\nYou have choosed Division.")
+                fd = "\nNumerator : "
+                value1d = input(fd)
+                sd = "\nDenominator : "
+                Value2d = input(sd)
+                total_d = int(value1d)/int(Value2d)
+                print(f"\nTotal : {total_d}")
+                continue
 
-# PyBuilder
-.pybuilder/
-target/
+#Multiplication
+            elif choosen_number == "3":
+                print("\nYou have choosed Multiplication.")
+                fm = "\nValue 1 : "
+                value1m = input(fm)
+                sm = "\nValue 2 : "
+                Value2m = input(sm)
+                total_m = int(value1m)*int(Value2m)
+                print(f"\nTotal : {total_m}")
+                continue
 
-# Jupyter Notebook
-.ipynb_checkpoints
+#Substriction
+            elif choosen_number == "4":
+                print("\nYou have choosed Substriction.")
+                fs = "\nValue 1 : "
+                value1s = input(fs)
+                ss = "\nValue 2 : "
+                Value2s = input(ss)
+                total_s = int(value1s)-int(Value2s)
+                print(f"\nTotal : {total_s}")
+                continue
 
-# IPython
-profile_default/
-ipython_config.py
+#Percentage Calculator
+            elif choosen_number == "5":
+                print("\nYou have choosed Percentage.")
+                fp = "\nValue :"
+                value1p = input(fp)
+                sp = "\nTotal :"
+                Value2p = input(sp)
+                total_p = int(value1p)/int(Value2p)*100
+                print(f"\nYour Answer : {total_p} %")
+                continue
 
-# pyenv
-#   For a library or package, you might want to ignore these files since the code is
-#   intended to run in multiple environments; otherwise, check them in:
-# .python-version
+#Discount Checker
+            elif choosen_number == "6":
+                print("\nYou have choosed Discount Checker.")
+                fd = "\nValue : "
+                value1dc = input(fd)
+                sd = "\nTotal : "
+                Value2dc = input(sd)
+                total_dc = 100-int(value1dc)/int(Value2dc)*100
+                print(f"\nDiscount : {total_dc} %")
+                continue
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
+#Squre Root
+            elif choosen_number == "7":
+                print("\nYou have choosen Square Root.")
+                fr = "\nValue : "
+                text = int(input(fr))
+                value1sq = math.sqrt(text)
+                print(f"\nSquare Root : {value1sq}")
+                continue
 
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
+#Compound Interset
+            elif choosen_number == "8":
+                print("\nYou have choosen Compound Interest.")
+                p = int(input("\nPrinciple : "))
+                r = int(input("Rate : "))
+                t = int(input("Time : "))
+                ci = p*r*t
+                print("\nCompound Interest :", ci)
+                continue
 
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
-#   in version control.
-#   https://pdm.fming.dev/#use-with-ide
-.pdm.toml
+#exit
+            elif choosen_number == "99":
+                exit()
+    
+            else:
+                print("You have entered worng value.")
+                continue
+elif take == 2:
+        print(para)
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+else :
+        print("You have selected wrong number.")
